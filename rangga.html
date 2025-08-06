@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangga Ermansyah - Personal Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="rangga.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* rangga.css */
+
+        /* Animasi Intro */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animasi Background Bergerak */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Animasi untuk teks "Tentang Saya" */
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body {
+            background: linear-gradient(270deg, #dfe6e9, #00b894); /* Gradien abu-abu cerah dan hijau toska */
+            background-size: 400% 400%; /* Ukuran latar belakang untuk animasi */
+            animation: backgroundAnimation 15s ease infinite; /* Animasi bergerak */
+            color: #333; /* Warna teks yang kontras */
+            font-family: 'Poppins', sans-serif; /* Font yang digunakan */
+        }
+
+        .container {
+            animation: fadeIn 1s ease-in-out; /* Menambahkan animasi fade-in */
+            padding: 20px; /* Ruang dalam */
+        }
+
+        /* Gaya untuk Sidebar */
+        .sidebar {
+            background-color: rgba(44, 62, 80, 0.9); /* Warna gelap untuk sidebar dengan transparansi */
+            color: #ecf0f1; /* Warna teks terang */
+            padding: 20px; /* Ruang dalam */
+            border-radius: 10px; /* Sudut melengkung */
+        }
+
+        /* Gaya untuk Link Navigasi */
+        .nav-links a {
+            color: #ecf0f1; /* Warna link */
+        }
+
+        .nav-links a:hover {
+            color: #3498db; /* Warna saat hover */
+        }
+
+        /* Gaya untuk Judul */
+        h2 {
+            color: #2980b9; /* Warna judul */
+        }
+
+        /* Gaya untuk Label "Tentang Saya" */
+        .about-label {
+            display: inline-block;
+            background-color: #00b894; /* Warna latar belakang label */
+            color: #fff; /* Warna teks label */
+            padding: 10px 15px; /* Ruang dalam label */
+            border-radius: 5px; /* Sudut melengkung */
+            margin-bottom: 20px; /* Jarak bawah */
+            animation: slideIn 0.5s ease; /* Animasi slide-in */
+        }
+
+        /* Gaya untuk Kartu Hobi */
+        .hobby-card {
+            background-color: #ffffff; /* Latar belakang putih untuk kartu */
+            border-radius: 8px; /* Sudut melengkung */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+            padding: 20px; /* Ruang dalam */
+            transition: transform 0.3s; /* Efek transisi saat hover */
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05); /* Membesarkan kartu saat hover */
+        }
+
+        /* Animasi untuk ikon hobi */
+        .hobby-icon {
+            animation: fadeIn 1s ease-in-out; /* Menambahkan animasi fade-in */
+            opacity: 0; /* Mulai dengan transparan */
+            animation-fill-mode: forwards; /* Mempertahankan status akhir animasi */
+        }
+
+        .hobby-card:nth-child(1) .hobby-icon {
+            animation-delay: 0.2s; /* Delay untuk ikon pertama */
+        }
+
+        .hobby-card:nth-child(2) .hobby-icon {
+            animation-delay: 0.4s; /* Delay untuk ikon kedua */
+        }
+
+        .hobby-card:nth-child(3) .hobby-icon {
+            animation-delay: 0.6s; /* Delay untuk ikon ketiga */
+        }
+
+        /* Gaya untuk Halaman Cerita */
+        .story-content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
+            border-radius: 10px; /* Sudut melengkung */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+        }
+
+        /* Gaya untuk Informasi Pribadi */
+        .info-card {
+            background-color: #ffffff; /* Latar belakang putih untuk informasi */
+            border-radius: 10px; /* Sudut melengkung */
+            padding: 20px; /* Ruang dalam */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+            margin-bottom: 20px; /* Jarak bawah */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="rangga gtg.jpg" alt="Foto Profil Rangga Ermansyah - Pemuda dengan kacamata, senyum ramah, latar belakang biru">
+                <h1>Rangga Ermansyah</h1>
+                <p>Web Developer & Designer UI/UX</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" data-page="education"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                <li><a href="#" data-page="experience"><i class="fas fa-briefcase"></i> Pengalaman</a></li>
+                <li><a href="#" data-page="hobbies"><i class="fas fa-heart"></i> Hobi</a></li>
+                <li><a href="#" data-page="story"><i class="fas fa-book"></i> Cerita</a></li> <!-- Tombol untuk halaman cerita -->
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <section id="home" class="page active">
+                <h2>Tentang Saya</h2>
+                <div class="about-label">Ini kisahku</div> <!-- Label untuk "Tentang Saya" -->
+                <div class="info-card">
+                    <p><strong>Nama:</strong> RANGGA ERMANSYAH</p>
+                    <p><strong>Tempat Lahir:</strong> PARUNG, BOGOR</p>
+                    <p><strong>Tanggal Lahir:</strong> [13 JANUARI - 2008]</p>
+                    <p><strong>Usia:</strong> [17 TAHUN]</p>
+                    <p><strong>Jenis Kelamin:</strong> [JANTAN]</p>
+                    <p><strong>Pendidikan:</strong> REKAYASA PERANGKAT LUNAK - SMK PGRI Pekanbaru</p>
+                </div>
+                <div class="about-content">
+                    <p>Halo! Saya Rangga Ermansyah, seorang siswa SMK PGRI PEKANBARU sekaligus siswa jurusan PPLG. yang fokus kepada Pengembangan Web desaign UI/UX dengan passion dalam menciptakan pengalaman digital yang menarik dan fungsional.</p>
+                    <p>Saya memiliki pengalaman 3 tahun dalam pengembangan web dengan spesialisasi di front-end development dan UI/UX design.</p>
+                    <p>saya juga adalah seorang anak Dari organisasi intra sekolah SMK PGRI PEKANBARU periode 2024/2025. sekaligus KETUA ROHIS SMK PGRI PEKANBARU</p>
+            
+                    <div class="skills-section">
+                        <h3>Keahlian</h3>
+                        <div class="skills">
+                            <span class="skill"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="skill"><i class="fab fa-react"></i>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Page -->
+            <section id="education" class="page">
+                <h2>Riwayat Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014 - 2020</div>
+                        <div class="timeline-content">
+                            <h3>Min 02 Bogor</h3>
+                            <p>Kelas 1.B - 6C</p>
+                            <p>Nilai rata rata terbaik : 86.47</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Smp Negeri 2 parung - bogor</h3>
+                            <p>Kelas 7.4 - 9.4</p>
+                            <p>Nilai rata rata terbaik: 84.25</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2026</div>
+                        <div class="timeline-content">
+                            <h3>Smk PGRI Pekanbaru</h3>
+                            <p>Jurusan Pengembangan perangkat Lunak dan Gim</p>
+                            <p>Nilai rata rata terbaik : 92.87</p>
+                        </div>
+                          <div class="timeline-item">
+                        <div class="timeline-date">Bismillah - 2026</div>
+                        <div class="timeline-content">
+                            <h3>UNIVERSITAS RIAU</h3>
+                            <p>Jurusan : TEKNIK INFORMATIKA - UNRI</p>
+                            <p>Nilai rata rata terbaik : -</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Page -->
+            <section id="experience" class="page">
+                <h2>Pengalaman Kerja</h2>
+                <div class="experience-cards">
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>Pelajar Web desain UI/UX</h3>
+                            <span class="exp-company">Smk PGRI Pekanbaru</span>
+                            <span class="exp-date">Jul 2023 - Sekarang</span>
+                        </div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Belajar Mengembangkan aplikasi web responsive menggunakan index.html, style.css dan script.js</li>
+                                <li>Membuat dan mengelola web desain dengan index.php dan Wordpress/figma</li>
+                                <li>Kolaborasi dengan kelompok desain untuk implementasi UI/UX</li>
+                                <li>Membuat wireframe untuk halaman penting (home, detail, setting) pada pengembangan website</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <h3>Karyawan toko resto Martabak mesir</h3>
+                            <span class="exp-company">Martabak mesir KUBANG - Pekanbaru</span>
+                            <span class="exp-date">Jun 2025 - sekarang</span>
+                        </div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li>Menyiapkan bahan-bahan mentah (memotong bawang, menggiling dan memasak daging, dll)</li>
+                                <li>Mengantar makanan/minuman ke meja dan menyiapkan martabak yang sudah siap masak</li>
+                                <li>Mencuci piring, peralatan dapur dan membuang sampah menjaga lingkungan kerja bersih</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hobbies Page -->
+            <section id="hobbies" class="page">
+                <h2>Hobi & Minat</h2>
+                <div class="hobby-cards">
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming UI/UX</h3>
+                        <p>Membuat tampilan aplikasi/website yang menarik, konsisten, dan intuitif dengan back end/front end.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Multimedia</h3>
+                        <p>Memotret landscape dan urban photography, beberapa karya telah dipamerkan.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Gambar dan desain</h3>
+                        <p>Menggambar dan mendesain poster atau objek lalu menggabungkan elemen-elemen baru dan menjadi sebuah karya seni sendiri.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Story Page -->
+            <section id="story" class="page">
+                <h2>Cerita Tentang Saya</h2>
+                <div class="story-content">
+                    <p>Rangga Ermansyah, anak suku Minang yang lahir dikota Bogor, tanah Sunda. Saya tumbuh di lingkungan yang kaya akan budaya dan tradisi. Sejak kecil sendiri, saat masa masa sd saya memiliki ketertarikan pada hobi desain seperti menggambar itu sendiri. di masa masa smp saya sering sekali bermain hp dan internet yang mengakibatkan menurunnya performa saya di pembelajaran kala itu, tetapi saya tidak menyerah. 2023 saya memiliki kerjaan kecil yaitu JB BENGKEL SESI AKUN, disana saya marih dalam hal pengamanan/security pada akun game online pada masa smp. setelah TAMAT dari smp, aku dan keluargaku pergi pulang ke kampung halaman yaitu kota bertuah dan ranah minang PEKANBARU DAN BATUSANGKAR. saat ingin masuk smk ada moment yang cukup menyedihkan, saya tertolak di SMKN 6 PEKANBARU jurusan desain Grafika, karna Hal kartu keluarga ku yang statusnya masih wilayah Jawa Barat. Tetapi saya tidak menyerah, saya dan keluargaku menyaranku masuk di SMK PGRI Pekanbaru Atau SMK AKBAR Pekanbaru. tetapi KAKA SEPUPU saya menyarankan untuk masuk saja di SMK PGRI PEKANBARU. dan kala itu saya mengenal jurusan PENGEMBANGAN PERANGKAT LUNAK DAN GIM.  saya selalu memiliki ketertarikan dalam dunia teknologi dan desain. Passion saya dalam pengembangan web dan desain UI/UX membawa saya untuk terus belajar dan berinovasi di smk aku pun memulai terjun kedunia ORGANISASi yaitu OSIS dan Menjabat Sebagai WAKIL KETUA OSIS PERIODE 2023/2024.</p>
+
+                     <section id="story" class="page">
+                <h2>Cerita Tentang Saya</h2>
+                <div class="story-content">
+                    <p>dan pada saat ini, aku terus mengembangkan keterampilan, bakat dan skill ku untuk mempersiapkan melanjut ke jenjang yang lebih serius, yaitu PTN. Kampus impianku, UNIVERSITAS RIAU Dan UNIVERSITAS NEGERI PADANG pada Tahun 2026 yang akan mendatang.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="rangga.js"></script>
+</body>
+</html>
